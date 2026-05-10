@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Newport Yacht Varnishing | Premium Brightwork & Teak Restoration RI</title>
+    <meta name="description" content="Newport's premier yacht varnishing and teak restoration. Traditional 12-coat systems for mahogany and brightwork. Serving Newport, Jamestown, and Bristol.">
+    <meta name="keywords" content="yacht varnishing Newport RI, marine brightwork, teak deck restoration, boat varnish Rhode Island, mahogany restoration, boat maintenance Narragansett Bay, yacht brightwork specialists">
+
+    <style>
+        :root { --navy: #0a192f; --gold: #c5a059; --white: #ffffff; --bg: #f9f9f9; --text: #333; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text); background: var(--bg); scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* NAVIGATION */
+        nav { background: var(--navy); padding: 0 4%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 2000; height: 85px; border-bottom: 3px solid var(--gold); }
+        .brand { color: var(--gold); font-size: 1.2rem; font-weight: 800; text-transform: uppercase; line-height: 1.1; }
+        .nav-links { display: flex; gap: 20px; align-items: center; } 
+        .nav-links a { color: white; text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; white-space: nowrap; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 10px 15px; border-radius: 4px; font-weight: 900 !important; }
+
+        /* HERO SECTION - PRESERVED */
+        .hero { 
+            background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('hero.jpg');
+            background-size: cover; background-position: center; 
+            min-height: 85vh; padding: 40px 6%; color: white;
+            display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; justify-content: center;
+        }
+        .hero-content { flex: 1.5; min-width: 380px; padding-top: 20px; }
+        .hero-content h1 { font-size: 3.5rem; line-height: 1; margin: 0 0 10px 0; color: var(--gold); text-transform: uppercase; font-weight: 900; }
+        
+        .hero-call-box { background: rgba(197, 160, 89, 0.15); border-left: 5px solid var(--gold); padding: 20px; margin: 20px 0; }
+        .hero-call-box span { display: block; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; color: var(--gold); font-size: 0.8rem; }
+        .big-phone { font-size: 3.2rem; font-weight: 900; color: white; text-decoration: none; display: block; line-height: 1; margin-bottom: 10px; }
+        .big-call-btn { display: inline-block; background: var(--gold); color: var(--navy); padding: 15px 35px; text-decoration: none; font-weight: 900; font-size: 1.3rem; border-radius: 5px; text-transform: uppercase; }
+
+        .form-container { background: white; padding: 30px; border-radius: 5px; width: 380px; color: var(--navy); box-shadow: 0 20px 50px rgba(0,0,0,0.5); margin-top: 10px; }
+        .form-container h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 800; border-left: 5px solid var(--gold); padding-left: 12px; }
+        input, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 0.9rem; }
+        .btn-submit { background: var(--navy); color: var(--gold); width: 100%; padding: 15px; border: none; font-weight: 900; cursor: pointer; font-size: 1.2rem; text-transform: uppercase; margin-top: 5px; }
+
+        /* DETAILED CONTENT SECTIONS */
+        section { padding: 80px 10%; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.8rem; color: var(--navy); text-transform: uppercase; margin-bottom: 10px; }
+        .bar { width: 80px; height: 5px; background: var(--gold); margin: 0 auto; }
+
+        .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+        .content-box { line-height: 1.8; }
+        .content-box h3 { color: var(--navy); border-left: 4px solid var(--gold); padding-left: 15px; }
+
+        /* SERVICES GRID */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-bottom: 5px solid var(--gold); }
+        .service-card h3 { color: var(--navy); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
+
+        /* PROCESS SECTION */
+        .process-steps { background: var(--navy); color: white; padding: 80px 10%; }
+        .step-item { margin-bottom: 30px; padding-left: 20px; border-left: 3px solid var(--gold); }
+        .step-item h4 { color: var(--gold); margin: 0 0 5px 0; font-size: 1.3rem; text-transform: uppercase; }
+
+        /* FAQ SECTION */
+        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .faq-item h4 { color: var(--navy); font-size: 1.2rem; margin-bottom: 10px; border-bottom: 1px solid var(--gold); display: inline-block; }
+
+        /* FOOTER */
+        footer { background: var(--navy); color: white; padding: 60px 10%; border-top: 5px solid var(--gold); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .marina-list { font-size: 0.85rem; opacity: 0.7; columns: 2; list-style: none; padding: 0; }
+
+        @media (max-width: 900px) { .nav-links { display: none; } .faq-grid { grid-template-columns: 1fr; } .hero-content h1 { font-size: 2.8rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="brand">NEWPORT YACHT<br>VARNISHING</div>
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">Our Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="tel:401-555-0123" class="nav-cta">Free Estimate</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>The Finish Is The Reputation</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin: 0;">Premium Marine Brightwork Restoration in Newport, RI.</p>
+        <div class="hero-call-box">
+            <span>Direct Estimate Line:</span>
+            <a href="tel:401-555-0123" class="big-phone">(401) 555-0123</a>
+            <a href="tel:401-555-0123" class="big-call-btn">Call Now</a>
+        </div>
+        <ul style="list-style: none; padding: 0; font-size: 1rem; line-height: 2;">
+            <li>⚓ 15+ Years Maritime Experience</li>
+            <li>⚓ Traditional 12-Coat Application Systems</li>
+            <li>⚓ Narragansett Bay's Elite Standard</li>
+        </ul>
+    </div>
+    <div class="form-container">
+        <h2>Free Quote</h2>
+        <p style="margin: 0 0 10px 0; font-size: 0.9rem;">Response within 24 hours.</p>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Boat Model & Length" required>
+            <textarea rows="3" placeholder="Tell us about your project..."></textarea>
+            <button type="submit" class="btn-submit">Send Request</button>
+        </form>
+    </div>
+</section>
+
+<section id="why-newport">
+    <div class="section-header">
+        <h2>The Newport Standard</h2>
+        <div class="bar"></div>
+    </div>
+    <div class="content-grid">
+        <div class="content-box">
+            <h3>Preserving Maritime Heritage</h3>
+            <p>Newport is home to some of the world's most significant classic yachts. We understand that brightwork on these vessels is more than aesthetic—it's a preservation of history. Our methods respect traditional craftsmanship while utilizing modern UV protection tech.</p>
+        </div>
+        <div class="content-box">
+            <h3>The Atlantic Climate Challenge</h3>
+            <p>The Rhode Island coast is unforgiving. High humidity, salt-saturated air, and intense summer UV rays can cause varnish to amber and crack in a single season. Our multi-coat systems are engineered specifically to thrive in this environment.</p>
+        </div>
+        <div class="content-box">
+            <h3>Structural Teak Integrity</h3>
+            <p>Teak decks and rails are a massive investment. Improper sanding can strip away years of life from the wood. We use precision depth-control techniques to ensure we only remove the grayed surface, leaving your structural teak thick and strong.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" style="background: #fff;">
+    <div class="section-header">
+        <h2>Expert Marine Services</h2>
+        <div class="bar"></div>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Full Strip & Restoration</h3>
+            <p>We remove failing coatings down to the raw grain, neutralizing deep stains and prepping the surface for a mirror-like finish that defines class.</p>
+        </div>
+        <div class="service-card">
+            <h3>Teak Deck Commissioning</h3>
+            <p>Professional cleaning and sealing to maintain the golden hue of your decks. We focus on seam integrity and structural wood health.</p>
+        </div>
+        <div class="service-card">
+            <h3>Seasonal Maintenance</h3>
+            <p>Our proactive buff-and-coat programs replenish UV inhibitors before failure occurs, significantly extending the time between full restorations.</p>
+        </div>
+    </div>
+</section>
+
+<section id="process" class="process-steps">
+    <div class="section-header">
+        <h2 style="color:white">The 12-Coat Process</h2>
+        <div class="bar"></div>
+    </div>
+    <div class="step-item">
+        <h4>01. Preparation & Stripping</h4>
+        <p>Hardware is carefully removed to prevent water intrusion points. Old finishes are stripped to reveal the wood's true character and natural beauty.</p>
+    </div>
+    <div class="step-item">
+        <h4>02. Precision Hand-Sanding</h4>
+        <p>Multiple stages of hand-sanding ensure a perfectly level surface. We eliminate grain inconsistencies to create a uniform foundation for the sealer.</p>
+    </div>
+    <div class="step-item">
+        <h4>03. Varnish Build-Up</h4>
+        <p>A traditional build-up of coats creates the necessary depth and protection. This labor-intensive phase is what gives our work its legendary optical clarity.</p>
+    </div>
+    <div class="step-item">
+        <h4>04. The Final Polish</h4>
+        <p>Ultra-fine grit wet sanding and final flow coats create a glass-like finish that stands up to the closest inspection at the dock.</p>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="section-header">
+        <h2>Marine FAQ</h2>
+        <div class="bar"></div>
+    </div>
+    <div class="faq-grid">
+        <div class="faq-item">
+            <h4>What is the benefit of a maintenance coat?</h4>
+            <p>Maintenance coats act as a sacrificial layer. By adding fresh varnish annually, you replace the UV inhibitors that the sun destroys, preventing the need for costly full stripping.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Which marinas do you serve?</h4>
+            <p>We provide mobile services across Newport Harbor, Safe Harbor NEB, Jamestown Boat Yard, and all major Narragansett Bay facilities.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How long does a full project take?</h4>
+            <p>Timing depends on weather and the number of coats. A full restoration usually takes 2-4 weeks to allow for proper curing between applications.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Can you work on interior wood?</h4>
+            <p>Yes. We apply the same level of precision to galleys, saloons, and companionways, often using specific low-VOC or satin finishes for cabin comfort.</p>
+        </div>
+    </div>
+</section>
+
+<footer id="locations">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4 style="color:var(--gold)">Primary Service Areas</h4>
+            <ul class="marina-list">
+                <li>Newport Harbor</li>
+                <li>Safe Harbor NEB</li>
+                <li>Jamestown Boat Yard</li>
+                <li>Bristol Yacht Club</li>
+                <li>Portsmouth Marina</li>
+                <li>Wickford Harbor</li>
+                <li>East Greenwich</li>
+                <li>Tiverton Waterfront</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 style="color:var(--gold)">Contact Newport Yacht Varnishing</h4>
+            <p><strong>Mobile Response Team</strong><br>
+            Phone: (401) 555-0123<br>
+            Email: info@newportvarnishing.com</p>
+            <p>Serving Rhode Island's elite fleet with master-level craftsmanship.</p>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:40px; opacity:0.5; font-size:0.8rem;">
+        &copy; 2026 Newport Yacht Varnishing. All Rights Reserved. Master Marine Wood Finishing Newport, RI.
+    </div>
+</footer>
+
+</body>
+</html>
